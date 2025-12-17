@@ -1,0 +1,719 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+    position: relative;
+}
+
+.tool {
+    background-color: #222;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tool ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.tool li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tool li a:hover {
+    color: #ff6b6b;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Banner styles */
+.banner {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px; /* Space for fixed navigation */
+}
+
+.banner_text {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in;
+}
+
+/* Section styles */
+section {
+    padding: 5rem 2rem;
+    background-color: white;
+}
+
+.intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.inro_page {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.inro_page::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #ff6b6b;
+}
+
+.intro_para {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+/* Button styles */
+.menu {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.menu:hover {
+    background-color: #ff5252;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.menu:active {
+    transform: translateY(-1px);
+}
+
+/* Footer styles */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.foot {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+.cont {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    font-weight: 700;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .tool ul {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .tool {
+        position: static;
+    }
+    
+    .banner {
+        margin-top: 0;
+        height: 70vh;
+    }
+    
+    .banner_text {
+        font-size: 2.5rem;
+    }
+    
+    .inro_page {
+        font-size: 2rem;
+    }
+    
+    .intro_para {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner_text {
+        font-size: 2rem;
+    }
+    
+    .inro_page {
+        font-size: 1.5rem;
+    }
+    
+    .menu {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .cont {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* about */
+
+
+/* Main Content Sections */
+section {
+    padding: 4rem 2rem;
+}
+
+.aboutsec {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.about {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3rem;
+    border-radius: 10px;
+    border-left: 5px solid #c52d2d;
+}
+
+.about-int {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Chef Section */
+.aboutchef {
+    background-color: #fff;
+}
+
+.chef-int {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chef {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #c52d2d;
+}
+
+.chef:hover {
+    transform: translateY(-10px);
+}
+
+.chef img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #f0f0f0;
+    margin-bottom: 1.5rem;
+    background-color: #ddd; /* Placeholder color */
+}
+
+.chef-head {
+    color: #c52d2d;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+.chef-para {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Mission & Values Section */
+.aboutvis {
+    background-color: #f5f5f5;
+}
+
+.main-res {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mis, .val {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mis {
+    border-right: 5px solid #c52d2d;
+}
+
+.val {
+    border-left: 5px solid #1a1a1a;
+}
+
+.mis-head, .mis-val {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.mis-val {
+    color: #c52d2d;
+}
+
+.main-res p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+    
+    section {
+        padding: 2rem 1rem;
+    }
+    
+    .about {
+        padding: 2rem 1.5rem;
+    }
+    
+    .about-int {
+        font-size: 1rem;
+    }
+    
+    .chef-int, .main-res {
+        grid-template-columns: 1fr;
+    }
+    
+    .chef, .mis, .val {
+        padding: 1.5rem;
+    }
+    
+    .chef-head, .mis-head, .mis-val {
+        font-size: 1.4rem;
+    }
+    
+    .cont {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+  
+    
+    .chef-head, .mis-head, .mis-val {
+        font-size: 1.2rem;
+    }
+    
+    .chef-para, .main-res p {
+        font-size: 1rem;
+    }
+    
+ 
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about, .chef, .mis, .val {
+    animation: fadeIn 0.8s ease-out;
+}
+
+
+/* Menu */
+
+
+/* Food Banner Section */
+.foodbanner {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.foodban h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 0 1rem;
+}
+
+/* Food Menu Section */
+.food-men {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.food-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.food-menu {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.food-menu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.food-menu img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-style: italic;
+}
+
+.food-menu img:before {
+    content: "Food Image";
+    display: block;
+}
+
+.food-menu h4 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.food-menu p {
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.food-menu p:nth-of-type(1) {
+    color: #666;
+    font-size: 0.95rem;
+    min-height: 60px;
+}
+
+.food-menu p:nth-of-type(2) {
+    color: #e74c3c;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .foodban h1 {
+        font-size: 2.2rem;
+    }
+    
+    .food-card {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .foodban h1 {
+        font-size: 1.8rem;
+    }
+    
+   
+    
+    .food-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .food-men {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Animation for menu items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.food-menu {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.food-menu:nth-child(1) { animation-delay: 0.1s; }
+.food-menu:nth-child(2) { animation-delay: 0.2s; }
+.food-menu:nth-child(3) { animation-delay: 0.3s; }
+.food-menu:nth-child(4) { animation-delay: 0.4s; }
+
+
+/* contact */
+
+
+
+
+/* Contact banner */
+.contactban {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-head h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+/* Contact section */
+.contactsec {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-det, .contact-hr {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-det p, .contact-hr ul {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-hr ul {
+    list-style: none;
+}
+
+.contact-hr li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Contact form */
+.cont-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.simplecon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.simplecon fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+.simplecon input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+.simplecon input::placeholder {
+    color: #777;
+}
+
+.simplecon fieldset:last-of-type {
+    grid-column: span 2;
+    text-align: center;
+    border: none;
+    padding: 0;
+}
+
+.simplecon button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.simplecon button:hover {
+    background-color: #c0392b;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+ 
+    
+    .contact-head h1 {
+        font-size: 2rem;
+    }
+    
+    .simplecon {
+        grid-template-columns: 1fr;
+    }
+    
+    .simplecon fieldset:last-of-type {
+        grid-column: span 1;
+    }
+    
+    .contactsec {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+   
+    
+    .contactban {
+        padding: 2rem 0;
+    }
+    
+    .cont-form {
+        padding: 1rem;
+    }
+    
+    .simplecon input {
+        padding: 0.6rem;
+    }
+}
